@@ -1,0 +1,108 @@
+\documentclass{scrartcl}
+
+\reversemarginpar % Move the margin to the left of the page
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}}
+
+\usepackage[nochapters]{classicthesis}
+\usepackage[LabelsAligned]{currvita}
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}}
+
+\usepackage[top=1.5cm,left=4.9cm,right=1.7cm,bottom=2cm]{geometry} % 'showframe' to see borders
+
+\usepackage{hyperref}
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon}
+
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}}
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+\date{}
+
+\def\myname{Joshua \textbf{Bridge}}
+\def\myemail{joshua.m.bridge@gmail.com}
+\def\myphone{+447957585934}
+\def\mygithub{github.com/josh-bridge}
+\def\mylinkedin{linkedin.com/in/josh-bridge}
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+\begin{cv}{
+\spacedallcaps{\myname}
+}
+
+\vspace{0.5em}
+
+\NewEntry{email}{\href{mailto:\myemail}{\myemail}}
+
+\NewEntry{phone}{\myphone}
+
+\NewEntry{github}{\href{http://\mygithub}{\mygithub}}
+
+\NewEntry{linkedin}{\href{http://\mylinkedin}{\mylinkedin}}
+
+\vspace{0.5em}
+
+\Description{\MarginText{About me}I'm a server developer with a deep interest and understanding of computing and its surrounding fields. I thoroughly enjoy solving problems and within my peer group I am often the person people come to when they are stuck on a piece of work.}
+
+\noindent\spacedlowsmallcaps{\textbf{Employment}}
+\vspace{0.5em}
+
+\NewEntry{2016-2017}{Cheshire Datasystems Ltd}
+
+\Description{\MarginText{Placement Year}\textbf{Junior Application Server Developer}\ \ $\cdotp$\ \ Treated like a normal member of the team, I was working on large scale enterprise Java software, including high volume server applications. Day-to-day focus on Scrum principles, pair programming, clean code, test-driven development and fixing technical debt from legacy code.}
+
+\NewEntry{2014-2015}{Discus Group Ltd}
+
+\Description{\MarginText{Summer Job}\textbf{Production Assistant}\ \ $\cdotp$\ \ Production of physical disc media (CD \& DVD), including copying, printing \& packaging. Involved solving problems with various faulty automation machines and related software issues. In the later stages of my time there I was asked to start building a web application in PHP with a user system.}
+
+\NewEntry{May 2015}{DX2 Websites}
+
+\Description{\MarginText{Short Part Time Work}\textbf{Part time Web Designer}\ \ $\cdotp$\ \ Created a new multi-page website design in Photoshop for a client, then helped implement this design into an existing wordpress theme.}
+
+\noindent\spacedlowsmallcaps{\textbf{Education}}
+\vspace{0.5em}
+
+\NewEntry{2014-2018}{Manchester Metropolitan University}
+
+\Description{\MarginText{Bachelor of Science (Hons)}\textbf{Software Engineering} (Currently attending - graduating 2018)\ \ $\cdotp$\ \ My final year project is a photo filter API with a recommendation system, written in Python and hosted on AWS.\\Current units: Enterprise Programming \textit{(Java)}, Artificial Intelligence \textit{(Machine Learning \& Algorithms)}, Information and Network Security \textit{(Network fundamentals \& Encryption methods)}.}
+
+\NewEntry{2008-2014}{Northampton School for Boys}
+
+\Description{\MarginText{GCSE \& A-Level}A-Levels: Photography, Geography and Psychology.}
+
+\noindent\spacedlowsmallcaps{\textbf{Skills (Languages, Technologies \& Frameworks)}}
+\vspace{0.5em}
+
+\Description{\MarginText{Advanced}Java \textit{(Spring, Hibernate, Mockito, Hamcrest)}\ \ $\cdotp$\ \ Python \textit{(Flask)}\ \ $\cdotp$\ \ Git \textit{(Github)}}
+
+\Description{\MarginText{Intermediate}HTML\ \ $\cdotp$\ \ CSS\ \ $\cdotp$\ \ JavaScript \textit{(JQuery)}\ \ $\cdotp$\ \ PHP\ \ $\cdotp$\ \ SQL\ \ $\cdotp$\ \ MongoDB\ \ $\cdotp$\ \ AWS\ \ $\cdotp$\ \ Jenkins\ \ $\cdotp$\ \ Linux\ \ $\cdotp$\ \ \LaTeX\ \ $\cdotp$\ \ REST APIs \textit{(Both designing \& consuming)}}
+
+\Description{\MarginText{Basic}Matlab\ \ $\cdotp$\ \ Weka\ \ $\cdotp$\ \ Bash\ \ $\cdotp$\ \ EJB\ \ $\cdotp$\ \ Google Cloud \textit{(App Engine, Datastore)}}
+
+\noindent\spacedlowsmallcaps{\textbf{Skills (General)}}
+\vspace{0.5em}
+
+\Description{Agile Development \textit{(Scrum)}\ \ $\cdotp$\ \ Test-Driven Development\ \ $\cdotp$\ \ Pair Programming\ \ $\cdotp$\ \ Object-oriented programming\ \ $\cdotp$\ \ Design Patterns\ \ $\cdotp$\ \ Clean Code}
+
+\noindent\textbf{\spacedlowsmallcaps{Other Information}}
+\vspace{0.5em}
+
+\Description{\MarginText{Achievements and Awards}2015\ \ $\cdotp$\ \ Academic achievment award: Highest Grade on Software Engineering Level 4}
+
+\vspace{-0.5em}
+
+\Description{2013\ \ $\cdotp$\ \ School arts award for Photography}
+
+
+\Description{\MarginText{Interests}Film photography\ \ $\cdotp$\ \ PC Gaming\ \ $\cdotp$\ \ Music production\ \ $\cdotp$\ \ Filmmaking}
+
+\end{cv}
+
+\end{document}
