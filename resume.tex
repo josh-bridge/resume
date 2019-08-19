@@ -15,7 +15,10 @@
 \hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon}
 
 \newlength{\datebox}\settowidth{\datebox}{Spring 2011 - Present} % Set the width of the date box in each block
-\newcommand{\NewLinkEntry}[2]{\noindent\hangindent=0.5em\hangafter=0 \parbox{\datebox}{\small \textit{#1}} #2 \vspace{0.5em}}% Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+
+\newlength{\lolbox}\settowidth{\lolbox}{Spring 2011} % Set the width of the date box in each block
+
+\newcommand{\NewLinkEntry}[2]{\parbox{\lolbox}{\small \textit{#1}} #2 \vspace{0.5em}}% Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
 
 \newcommand{\NewEntry}[2]{\noindent\hangindent=0.5em\hangafter=0 \color{Maroon}#1\color{Black} \hspace{1em} \parbox{\datebox}{\small \textit{#2}}% Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
 \vspace{0.5em}}
@@ -52,7 +55,7 @@
 
 \vspace{0.5em}
 
-\Descriptionlol{\MarginText{About me}I'm a server developer with a deep interest and understanding of computing and its surrounding fields. \\I thoroughly enjoy solving problems and when taking on a piece of work I constantly strive to create the highest quality product, honing my own skills in the process.}
+\Description{\MarginText{About me}I'm a server developer with a deep interest and understanding of computing and its surrounding fields. \\I thoroughly enjoy solving problems and when taking on a piece of work I constantly strive to create the highest quality product, honing my own skills in the process.}
 
 \vspace{1em}
 
