@@ -14,16 +14,22 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon}
 
+\definecolor{DateGray}{gray}{0.4}
+
 \newlength{\datebox}\settowidth{\datebox}{Spring 2011 - Present} % Set the width of the date box in each block
 
 \newlength{\lolbox}\settowidth{\lolbox}{Spring 2011} % Set the width of the date box in each block
 
 \newcommand{\NewLinkEntry}[2]{\hspace{2em}\parbox{\lolbox}{\small \textit{#1}}#2 \vspace{0.5em}}% Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
 
-\newcommand{\NewEntry}[2]{\noindent\hangindent=0.5em\hangafter=0 \color{Maroon}#1\color{Black} \hspace{1em} \parbox{\datebox}{\small \textit{#2}}% Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\newcommand{\NewEntry}[2]{\noindent\hangindent=0.5em\hangafter=0 \color{Maroon}#1\color{Black} \hspace{1em} \parbox{\datebox}{\small \color{DateGray} \textit{#2}}% Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
 \vspace{0.5em}}
 
 \newcommand{\Description}[1]{\hangindent=0.5em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+% \newcommand{DotSpacer}{\ \ $\cdotp$\ \ }
+
+\newcommand{\DateRange}[1]{\color{DateGray} \textit{#1} \color{Black}}
 
 \date{}
 
@@ -60,9 +66,13 @@
 \noindent\spacedlowsmallcaps{\textbf{Employment}}
 \vspace{0.5em}
 
-\NewEntry{Barclays}{Sep 2018 - Present}
+\NewEntry{Barclays}{Nov 2018 - Present}
 
-\Description{\MarginText{Permanent Position}\textbf{BA3 Java Engineer}\ \ $\cdotp$\ \ Developing an internal application used by many colleagues daily to serve customers in branches and call centers. High focus on delivery \& code reviews, using Java 8 \& Spring Boot.}
+\Description{\MarginText{Permanent Position}\textbf{Senior Java Engineer} \DateRange{(Feb 2020 - Present)}\ $\cdotp$\ \ Designed and developed an API from start to finish using Kotlin \& Spring Boot, alongside work from previous position.
+
+\vspace{0.5em}
+
+\textbf{Java Engineer} \DateRange{(Nov 2018 - Feb 2020)}\ $\cdotp$\ \ Developing an internal application used by thousands of colleagues daily to serve customers in branches and call centers. High focus on delivery \& code reviews, using Java 8 \& Spring Boot.}
 
 \vspace{1em}
 
@@ -95,7 +105,9 @@
 
 \NewEntry{Manchester Metropolitan University}{2014 - 2018}
 
-\Description{\MarginText{BSc (Hons)}\textbf{Software Engineering} (First Class Honours)\ \ $\cdotp$\ \ Final year project: Photo filter API with a recommendation system, written in Python and ReactJS; hosted on AWS.\\Chosen units: Enterprise Programming \textit{(Java)}, Artificial Intelligence \textit{(Machine Learning \& Algorithms)}, Information and Network Security \textit{(Network fundamentals \& Encryption methods)}.}
+\Description{\MarginText{BSc (Hons)}\textbf{Software Engineering} (First Class Honours)\ \ $\cdotp$\ \ Final year project: Photo filtering API with a machine-learning recommendation system. Written in Python and ReactJS, hosted on AWS.}
+
+% \\Chosen units: Enterprise Programming \textit{(Java)}, Artificial Intelligence \textit{(Machine Learning \& Algorithms)}, Information and Network Security \textit{(Network fundamentals \& Encryption methods)}.
 
 \vspace{1em}
 
@@ -106,17 +118,17 @@
 \noindent\spacedlowsmallcaps{\textbf{Skills (Languages, Technologies \& Frameworks)}}
 \vspace{0.5em}
 
-\Description{\MarginText{Advanced}Java \textit{(Spring, Hibernate, Mockito, Hamcrest)}\ \ $\cdotp$\ \ Python \textit{(Flask)}\ \ $\cdotp$\ \ Git \textit{(Github, Bitbucket)}}
+\Description{\MarginText{Advanced}Java \textit{(Spring, Hibernate, Mockito, Hamcrest)}\ \ $\cdotp$\ \ Kotlin \textit{(Coroutines, Mockk)}\ \ $\cdotp$\ \ Git \textit{(Github, Bitbucket)}}
 
 \vspace{1em}
 
-\Description{\MarginText{Intermediate}Gradle\ \ $\cdotp$\ \ HTML\ \ $\cdotp$\ \ CSS\ \ $\cdotp$\ \ JavaScript \textit{(JQuery)}\ \ $\cdotp$\ \ PHP\ \ $\cdotp$\ \ SQL\ \ $\cdotp$\ \ MongoDB\ \ $\cdotp$\ \ AWS\ \ $\cdotp$\ \ Jenkins\ \ $\cdotp$\ \ Linux\ \ $\cdotp$\ \ \LaTeX\ \ $\cdotp$\ \ REST APIs \textit{(Both designing \& consuming)}}
+\Description{\MarginText{Intermediate}Python \textit{(Flask)}\ \ $\cdotp$\ \ Gradle\ \ $\cdotp$\ \ HTML\ \ $\cdotp$\ \ CSS\ \ $\cdotp$\ \ JavaScript \textit{(JQuery)}\ \ $\cdotp$\ \ PHP\ \ $\cdotp$\ \ SQL\ \ $\cdotp$\ \ MongoDB\ \ $\cdotp$\ \ AWS\ \ $\cdotp$\ \ Jenkins\ \ $\cdotp$\ \ Linux\ \ $\cdotp$\ \ \LaTeX\ \ $\cdotp$\ \ REST APIs \textit{(Both designing \& consuming)}}
 
 \vspace{1em}
 
-\Description{\MarginText{Basic}Matlab\ \ $\cdotp$\ \ ReactJS\ \ $\cdotp$\ \ Angular\ \ $\cdotp$\ \ Weka\ \ $\cdotp$\ \ Bash\ \ $\cdotp$\ \ EJB\ \ $\cdotp$\ \ Google Cloud \textit{(App Engine, Datastore)}}
-
-\vspace{1em}
+% \Description{\MarginText{Basic}Matlab\ \ $\cdotp$\ \ ReactJS\ \ $\cdotp$\ \ Angular\ \ $\cdotp$\ \ Weka\ \ $\cdotp$\ \ Bash\ \ $\cdotp$\ \ EJB\ \ $\cdotp$\ \ Google Cloud \textit{(App Engine, Datastore)}}
+%
+% \vspace{1em}
 
 \noindent\spacedlowsmallcaps{\textbf{Skills (General)}}
 \vspace{0.5em}
